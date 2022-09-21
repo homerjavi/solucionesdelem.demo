@@ -27,7 +27,10 @@
                 </div>
             </div>
             @guest
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline self-center hover:text-blue-600">Log in</a>
+                <div class="flex items-center">
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline self-center hover:text-blue-600">Log in</a>
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline self-center hover:text-blue-600">Registro</a>
+                </div>
             @endguest
 
             <!-- Settings Dropdown -->
