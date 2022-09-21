@@ -83,16 +83,17 @@
             <x-responsive-nav-link :href="route('services.index')" :active="request()->routeIs('services.index')">
                 Inicio
             </x-responsive-nav-link>
+            @auth
+            <x-responsive-nav-link :href="route('my-services')" :active="request()->routeIs('my-services')">
+                Mis servicios
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('my-chats')" :active="request()->routeIs('my-chats')">
+                Mis chats
+            </x-responsive-nav-link>
+            @endauth
         </div>
 
         @auth
-            <x-nav-link :href="route('my-services')" :active="request()->routeIs('my-services')">
-                Mis servicios
-            </x-nav-link>
-            <x-nav-link :href="route('my-chats')" :active="request()->routeIs('my-chats')">
-                Mis chats
-            </x-nav-link>
-
             <!-- Responsive Settings Options -->
             <div class="pt-4 pb-1 border-t border-gray-200">
                 <div class="px-4">
