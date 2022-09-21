@@ -3,13 +3,14 @@
 1. **git clone https://github.com/homerjavi/solucionesdelem.demo.git**
 2. En la consola accedemos a la carpeta del proyecto
 3. **composer install**
-4. Crear base de datos: 
+4. **cp .env.example .env**
+5. Crear base de datos: 
     - Nombre: delem
     - Usuario: root
     - Contraseña: 
-5. **php artisan migrate:fresh --seed**
-6. **php artisan key:generate**
-7. **php artisan storage:link**
+6. **php artisan migrate:fresh --seed**
+7. **php artisan key:generate**
+8. **php artisan storage:link**
 
 En este punto ya tenemos todo instalado, ya solo nos queda iniciar el servicio de base de datos y "levantar" el proyecto con **php artisan serve**
 
