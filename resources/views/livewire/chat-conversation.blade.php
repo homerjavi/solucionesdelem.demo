@@ -21,7 +21,7 @@
                         @if ($message->type == 'text')
                             <span class="font-medium text-gray-800">{{ $message->content }}</span>
                         @elseif ( isImage( $message->type ) )
-                            <img src="{{ asset( $message->content ) }}"/>
+                            <img src="{{ asset( $message->content ) }}" class="rounded" style="max-width: 400px;"/>
                         @else
                             <a href="{{ asset( $message->content ) }}" target="_blank" class="flex justify-between content-end font-medium text-gray-800">
                                 <span>{{ $message->file_name }} </span>
@@ -68,7 +68,7 @@
                 </form>
 
                 @if ( $file && isImage( $file->getMimeType() ) )
-                    <img src="{{ asset( $file->temporaryUrl() ) }}"/>
+                    <img src="{{ asset( $file->temporaryUrl() ) }}" class="mt-4 rounded" style="max-width: 400px;"/>
                 @endif
             </div>
         </div>
