@@ -7,8 +7,7 @@ use App\Http\Resources\ServiceResource;
 use App\Models\Chat;
 use App\Models\Service;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
+use Illuminate\Http\RedirectResponse;
 
 class ServiceController extends Controller
 {
@@ -38,7 +37,7 @@ class ServiceController extends Controller
         return view( 'services.form' );
     }
 
-    public function store( ServiceRequest $request ) :Redirector
+    public function store( ServiceRequest $request ) :RedirectResponse
     {
         try {
             Service::create( $request->validated() );
